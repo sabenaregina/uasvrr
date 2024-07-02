@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>VIRTUAL REALITY TOUR Gereja Lampung by. Sabena Regina</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component/dist/aframe-proxy-event-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <audio id="click-sound" src="./audio/click.ogg"></audio>
+            <img id="orb1" src="./assets/gpdim.png">
+            <img id="orb2" src="./assets/gbir.png">
+            <img id="orb3" src="./assets/mdc.png">
+            <img id="orb4" src="./assets/gbiaf.png">
+            <img id="orb5" src="./assets/gys.png">
+            <img id="orb6" src="./assets/gbp.png">
+            <img id="orb7" src="./assets/gmiimanuel.png">
+            <img id="orb8" src="./assets/gms.png">
+            <img id="orb9" src="./assets/jki.png">
+            <img id="orb10" src="./assets/gktk.png">
+            <img id="orb11" src="./assets/gkt.png">
+            <img id="orb12" src="./assets/ggp.png">
+            <img id="orb13" src="./assets/gkpi.png">
+            <img id="orb14" src="./assets/hki.png">
+            <img id="orb15" src="./assets/santoyohanes.png">
+            <img id="orb16" src="./assets/gbkp.png">
+            <img id="orb17" src="./assets/gerejapentakosta.png">
+            <img id="orb18" src="./assets/gbi.png">
+            <img id="orb19" src="./assets/gkps.png">
+            <img id="orb20" src="./assets/gkpa.png">
+        </a-assets>
+
+        <!-- Camera + cursor. -->
+        <a-entity id="camera" camera look-controls>
+            <a-cursor id="cursor" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02;"
+                material="color: black; shader: flat" cursor="maxDistance: 30; fuse: true"
+                animation__click="property: scale; from: 0.5 0.5 0.5; to: 1 1 1;startEvents: click; dur: 150;easing:easeInQuad;"
+                animation__fusing="property: scale; from: 1 1 1; to: 0.5 0.5 0.5;startEvents: fusing; dur: 1000;easing:easeInQuad;"
+                event-set__mouseenter="_event: mouseenter; color: springgreen"
+                event-set__mouseleave="_event: mouseleave; color: black" raycaster="objects: .link"></a-cursor>
+        </a-entity>
+
+        <!-- Image 360 -->
+        <a-sky id="image-360" radius="10" src="#orb1"></a-sky>
+
+        <!-- Links. -->
+        <a-entity id="links" layout="type: circle; radius: 5" position="0 -1 -4">
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb1"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb1">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb2"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb2">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb3"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb3">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb4"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb4">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb5"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb5">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb6"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb6">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb7"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb7">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb8"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb8">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb9"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb9">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb10"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb10">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb11"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb11">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb12"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb12">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb13"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb13">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb14"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb14">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb15"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb15">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb16"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb16">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb17"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb17">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb18"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb18">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb19"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb19">
+            </a-entity>
+            <a-entity class="link" geometry="primitive: plane; height: 1; width: 1;" material="shader: flat; src: #orb20"
+                event-set__click="_event: click; _target: #image-360; _delay: 300;"
+                proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" data-src="#orb20">
+            </a-entity>
+        </a-entity>
+    </a-scene>
+
+    <script>
+        AFRAME.registerComponent('set-image', {
+            schema: {
+                on: { type: 'string' },
+                target: { type: 'selector' },
+                src: { type: 'string' }
+            },
+            init: function () {
+                var data = this.data;
+                this.el.addEventListener(data.on, function () {
+                    data.target.setAttribute('src', data.src);
+                });
+            }
+        });
+
+        document.querySelectorAll('.link').forEach(link => {
+            link.addEventListener('click', function () {
+                var imgSrc = this.getAttribute('data-src');
+                document.querySelector('#image-360').setAttribute('src', imgSrc);
+            });
+        });
+    </script>
+</body>
+
+</html>
